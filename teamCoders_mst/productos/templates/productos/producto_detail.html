@@ -1,0 +1,75 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}Detalle Fruto{% endblock %}
+{% block content %}
+
+<style>
+  .buttondetail{
+    width:100%;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    padding: 7px;
+    background-color: #FFA300;
+    color: white;
+    border-radius: 15px;
+    font-family: 'calibri';
+  }
+  .imgdeter{
+    width: 600px;
+    height: 600px;
+
+ }
+ .contenedor{
+  height: 200px;
+ }
+
+ h2{
+  color: rgb(27, 130, 13);
+  font-size: 36px;
+ }
+
+ h1{
+  text-align: center;
+ }
+
+</style>
+<body id="espacio">
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 md-order-1">
+      <img class="img-fluid imgdeter" src="{{producto.imagen.url}}" >
+    </div>
+
+    <div class="col-md-6 md-order-2">
+      <div class="pt-3 pb-3 ">
+      <h1 >{{producto.nombre}}  </h1>
+      </div >
+      <div class="border border-top ">
+      <h2 >${{producto.precio}}.00  </h2>
+      </div>
+      <div class="border border-warning p-4 mb-3 wrapper">
+        <h6>Descripcion:</h6>
+      <p class="fs-5 " >
+        {{producto.descripcion}}
+      </p>
+      </div>
+      <br>
+      <br>
+      <br>
+        <div class="d-grid gap-3 col-10 mx-auto">
+          <!--<a href=""><button class="btn btn-outline-primary buttondetail">Agregar al carrito</button></a>-->
+          <a href="{% url 'productos' %}"><button class="btn btn-success buttondetail "> Volver</button></a>
+           
+        </div>
+      
+    </div>
+
+  </div>
+
+
+</div>
+
+<div >
+</body>
+{%endblock%}

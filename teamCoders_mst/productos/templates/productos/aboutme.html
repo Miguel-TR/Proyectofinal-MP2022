@@ -1,0 +1,32 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Tienda{% endblock %}
+
+{% block content %}
+<h1>Productos</h1>
+
+<div class="container text-center">
+  <div class="row">
+    {%for producto in misproductos%}
+    <div class="col">
+       
+      <div class="card" style="width: 18rem;">
+        <img src="{{producto.imagen.url}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{producto.nombre}}</h5>
+              <p class="card-text">{{producto.descripcion}}</p>
+              <a href="#" class="btn btn-primary">Comprar</a>
+            </div>
+      </div>
+
+      
+      
+    </div>
+    {%endfor%}
+  </div>
+</div>
+
+
+
+
+{%endblock%}

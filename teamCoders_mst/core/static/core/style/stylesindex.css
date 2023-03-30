@@ -1,0 +1,392 @@
+*{
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+@media screen and (max-width: 450px) {
+  .ocultar{
+  display:none;
+}
+}
+
+#contenedor{
+  margin: 60px;
+  background: #FFC107;
+  border-top: 19px solid #7DF324;
+}
+/* ===== GENERAL ===== */
+.home {
+  min-height: 50vh;
+  background: linear-gradient(rgba(225,184,0,0.2), rgba(236,134,0,0.8)), url(https://images.unsplash.com/photo-1543158181-1274e5362710?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.home .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.home .content h1 {
+  font-size: 4rem;
+  color: #fff;
+  padding: 0 1rem;
+  text-shadow: 0 .3rem .5rem rgba(0, 0, 0, .3);
+  text-transform: uppercase;
+}
+
+.home .content p {
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
+  padding: 1rem 25rem;   
+  text-shadow: 0 .3rem .5rem rgba(24, 103, 8, 0.3);
+  font-size: 40px;
+}
+
+.home .content button {
+  height: 5rem;
+  width: 20rem;
+  border-radius: 1rem;
+  background: #f9580e;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: .2s;
+  box-shadow: 0 .3rem 1rem rgba(0, 0, 0, .3);
+  margin: 4rem 0;
+  border-color: #f9580e;
+}
+
+.home .content button:hover {
+  background: none;
+  border: .2rem solid #f9580e;
+}
+body{
+  margin: 0;
+}
+#espacio{
+  padding-top: 14rem;
+  position: relative;
+}
+
+/* =====OFERTAS====== */
+.oferta h1{
+  color: #5c491b;
+  text-align: center;
+}
+
+.container-of{
+  width: 100%;
+  max-width: 1200px;
+  height: 430px;
+  display: flex;
+  
+  justify-content: center;
+  margin: auto;
+}
+
+.container-of .card{
+  width: 330px;
+  height: 430px;
+  border-radius: 8px;
+  box-shadow: 0 2px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin: 20px;
+  text-align: center;
+  transition: all 0.25s;
+}
+
+.container-of .card:hover{
+  transform: translateY(-15px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.container-of .card img{
+  width: 330px;
+  height: 220px;
+}
+
+.container-if .card h4{
+  font-weight: 600;
+}
+
+.container-of .card p{
+  padding: 0 1rem;
+  font-size: 16px;
+  color: red;
+}
+
+.container-of .card a{
+  font-weight: 500;
+  text-decoration: none;
+  color: rgb(108, 231, 51);
+}
+
+
+img {
+  max-width: 100%;
+}
+
+/* ==== VIDEO ===== */
+
+.main{
+  width: 80%;
+  margin: auto;
+}
+
+.main h1{
+  text-align: center;
+  color: #7DF324;
+}
+
+.contenedor-video{
+  position: relative;
+  overflow: hidden;
+  padding-top: 50%;
+  border: 5px solid rgb(64, 255, 0);
+  display: flex;  
+}
+
+.contenedor-video iframe{
+ position: absolute;
+ top: 0%;
+ left: 0%;
+ width: 100%;
+ height: 100%;
+ 
+}
+
+/* ==== TARJETA DE PRESENTACIÓN ===== */
+.card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  background: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: .5s;
+  margin: 15px 20px;
+  margin: auto; 
+}
+
+.card:hover {
+  box-shadow: 0 5px 15px rgba(106, 255, 0, 0.5);
+  transform: translateY(-15px);
+}
+
+.card .head {
+  height: 125px;
+  width: 100%;
+  position: relative;
+}
+
+.card .head .circle {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: #ffcc50;
+  bottom: 0;
+}
+
+.card .head .img {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  background: #fff;
+  padding: 5px;
+  border-radius: 50%;
+  bottom: -30%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.card .head .img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+.card .description {
+  height: 200px;
+  padding: 40px 20px 20px 20px;
+  border-bottom: solid 1px rgba(6, 74, 76, .18);
+  text-align: center;
+}
+
+.card .description h3 {
+  font-size: 23px;
+  color: #853400;
+}
+
+.card .description h4 {
+  font-size: 20px;
+  color: #ff9460;
+}
+
+.card .description p {
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+
+.card .contact {
+  width: 100%;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card .contact a {
+  text-decoration: none;
+  color: #fff;
+  background: #447915;
+  padding: 5px 20px;
+  border-radius: 5px;
+  transition: .3s;
+}
+
+.card .contact a:hover {
+  
+  background: #0b6164;
+ 
+}
+
+
+/*BOTON*/
+.btn-a{
+  display: inline-block;
+  margin-top: 5px;
+  background-color: #FFA300;
+  padding: 5px 18px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+.btn-a:hover{
+  background-color: #ffff89;
+}
+
+/* ===== TARJETAS===== */
+.card-m {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 5px 10px #00cb30;
+  border-radius: 10px;
+  transition: 0.1s;
+  margin: auto;
+}
+
+.card-m:hover {
+  transform: scale(1.02);
+  box-shadow: 0 5px 20px #033f49;
+}
+
+.card-m .img-card {
+  background: url(https://t1.rg.ltmcdn.com/es/posts/2/6/1/como_deshidratar_frutas_74162_600.webp);
+  width: 40%;
+  height: 100%;
+  background-size: cover;
+}
+.card-m .img-card2 {
+  background: url(https://images.unsplash.com/photo-1607664608695-45aaa6d621fc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80);
+  width: 40%;
+  height: 100%;
+  background-size: cover;
+}
+
+.card-m .contentt {
+  width: 60%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 50px 150px 50px;
+  padding: 10px 15px;
+}
+
+.card-m .contentt .title h3 {
+  color: #927c00;
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 25px;
+}
+
+.card-m .contentt .title span {
+  color: #0089ba;
+  font-size: 12px;
+}
+
+.card-m .contentt .text p {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 15px;
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+.card-m .contentt .btn-container button {
+  background: #0089ba;
+  padding: 5px 10px;
+  color: #fff;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.card-m .contentt .btn-container button:hover {
+  background: #017eac;
+} 
+
+
+/* ===== PREGUNTAS ===== */
+
+details{
+  background: #e8c39e;
+  padding: .5rem;
+  border-radius: 6px;
+  margin: .5rem;
+  cursor: pointer;
+  font-size: 17px;
+  font-family: 'Lexend Deca', sans-serif;
+
+}
+
+summary{
+  color: #7a5c3c;
+  list-style: none;
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+summary::before{
+  content: '+';
+  padding-right: 1rem;
+}
+
+details[open] summary::before{
+  content: '-';
+}
+
+/*BOTON*/
+.btnnn{
+  display: inline-block;
+  margin-top: 5px;
+  background-color: #FFA300;
+  padding: 5px 18px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Lexend Deca', sans-serif;
+}
+

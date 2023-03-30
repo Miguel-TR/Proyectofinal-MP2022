@@ -1,0 +1,85 @@
+{% extends 'core/base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %} Contacto {% endblock %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'miestilo.css'%}">
+</head>
+{%block content%}
+<body>
+     <!--=============================================-->
+<!--ENCABEZADO -->
+<!--=============================================-->
+<div>
+    <div class="page-title-wrapper text-center">
+      <h1 class="page-title titulo">
+          <span class="base" data-ui-id="page-title-wrapper">Inicia sesión</span>
+      </h1>
+  </div>
+  <div class="land border-top border-3"></div>
+  </div>
+    <!--=============================================-->
+  <!--FORMULARIO -->
+  <!--=============================================-->
+  
+      <div class="container " >
+      <div class="row w-100  my-5 servicio-fila align-items-center  mb-1 " >
+        
+        <div class="col-lg-6 col-md-12 col-sm-12 px-3 border-0 bg-transparent ">
+     
+          <div class="mx-auto pb-3">
+            <h2 class="titulo"><strong class="base" data-ui-id="page-title-wrapper">Acceder</strong></h2>
+            <p></p>
+        </div>
+     
+          <form action="/action_page.php">
+            <fieldset >
+                <label for="nombreUsuario">Nombre de usuario o correo electrónico <span style="color:red">*</span></label>
+                <br>
+                <input class="controls" type="email" type="text" id="nombreUsuario" name="nombreUsuario" value="" required size="auto"><br>
+                <br>
+                <label for="contraseña">Contraseña <span style="color:red">*</span></label>
+                <br>
+                <input class="controls"type="password" id="contraseña" name="contraseña" placeholder="" required><br><br>
+                <input type="checkbox" id="recordar" name="recordar" value="">
+                <label for="recordar"> Recuerdame        </label><a href="#">     ¿Olvido su contraseña?</a><br>
+                <br>
+                <input  class="button" type="submit" value="Enviar">
+            </fieldset>
+        </form>
+     
+  
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12  border-0 bg-transparent form-reg">
+          <div class="mx-auto pb-3">
+            <h2 class="titulo"><strong class="base" data-ui-id="page-title-wrapper">Acceder</strong></h2>
+            <p></p>
+        </div>
+          <form action="/action_page.php">
+  
+          <label for="nombreUsuario">Dirección de correo Electronico<span style="color:red">*</span></label>
+          <br>
+          <input class="controls" type="email" type="text" id="nombreUsuario" name="nombreUsuario" value="" required size="50"><br>
+          <br>
+          <label for="contraseña">Contraseña <span style="color:red">*</span></label>
+          <br>
+          <input class="controls"type="password" id="contraseña" name="contraseña" placeholder="" required><br><br>
+          <input type="checkbox" id="recordar" name="recordar" value="">
+          <label for="recordar"> Recuerdame</label><br><br>
+          <input class="button" type="submit" value="Registrarse">
+          <p class="texto">Tus datos personales se utilizarán para procesar tu pedido, mejorar tu experiencia en esta web, gestionar el acceso a tu cuenta y otros propósitos descritos en nuestra <a href="#">política de privacidad.</a></p>
+        </form>
+  
+      </div>
+  
+        </div>
+    </div>
+  </section>
+  {%endblock%}
+    
+</body>
+</html>

@@ -1,0 +1,117 @@
+{% extends 'core/base.html' %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coders_MST | {%block title%}Contacto{%endblock%}</title>
+  <!--title>UNJu MP - Acerca de</title-->
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'core/miestilos.css'%}">
+  <link rel="stylesheet" type="text/css" href="{% static 'core/css/style(acercade-micuenta).css'%}">
+  {%block content%}
+<style>
+  h2{
+    text-align: center;
+    color: brown;
+    font-size: 45px;
+  }
+</style>
+
+  <body id="espacio">
+  <div class="container text-center" >
+    <div class="row">
+      <div class="col-lg-8 sm-2">
+        <h4>CONTACTANOS</h4>
+        <P>No dudes en escribirnos por cualquiera de nuestras vías. Estamos para ayudarte. Visitá nuestra tienda y
+          encontrarás todo lo que necesitás para una alimentación saludable, a buen precio y con la mejor calidad</P>
+        <div class="logo text-center">
+          <div class="row row-cols-2">
+            <div class="col ">
+              <img src="{% static 'core/img/direccion.png'%}" alt="logo-direccion" width="120" height="120">
+              <h4>Direccion</h4>
+              <p>Italo palanca nº 10</p>
+            </div>
+            <div class="col">
+              <img src="{% static 'core/img/whatsapp.png'%}" alt="logo-wpp" width="120" height="120">
+              <h4>WhatsApp</h4>
+              <p>+54 388 123-45-678</p>
+            </div>
+            <div class="col">
+              <img src="{% static 'core/img/reloj.png'%}" alt="logo-horario" width="120" height="120">
+              <h4>Horario de atencion</h4>
+              <p>Lunes a Sabados de: 9:00 a 18hs</p>
+            </div>
+            <div class="col">
+              <img src="{% static 'core/img/correo.png'%}" alt="logo-wpp" width="120" height="120">
+              <h4>Correo electronico</h4>
+              <p>Coders_MST@gmail.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 sm-2 " style="background-color:rgb(167, 252, 167);">
+        <form action="" class="row g-3 needs-validation" novalidate method="post">
+          {% csrf_token %}
+          {{form}}
+          <br>
+            <button class="btn btn-primary" type="submit">enviar</button>
+        </form>
+        {{mensaje}}
+      </div>
+    </div>
+  </div>
+  <br>
+  <h2>Preguntas Frecuentes</h2>
+  <div class="container text-center">
+    <div class="row">
+      <div class="col">
+        <details>
+          <summary>¿Por qué se cobran varios envios?</summary>
+          <div>
+            <p>Cada vendedor tiene una política de gastos de envío, en los que se incluye la selección de productos,
+              empaquetado y envío directo a tu domicilio si pasar por ningún otro almacén.
+              Nosotros queremos que el producto llegue lo más fresco posible, almacenarlo supone un pérdida de calidad
+              en muchos alimentos perecederos.</p>
+            <p>Para conseguir que el envío salga más barato hay que
+              revisar las condiciones de envío de los productores, prácticamente todos ellos ofrecen gastos de envío
+              gratis a partir de un importe.</p>
+          </div>
+        </details>
+        <details>
+          <summary>¿Puedo elegir una franja horaria concreta de envio?</summary>
+          <div>
+            <p>Como ocurre con la mayoría de envíos a domicilio, no puede especificarse un horario de entrega.
+              Por eso recomendamos escribir en las observaciones el piso de un vecino o si existe la posibilidad de
+              dejar al portero.</p>
+          </div>
+        </details>
+        <details>
+          <summary>¿Como conservo las frutas deshidratadas?</summary>
+          <div>
+            <p>Conserva la fruta seca dentro de un tarro de cristal hermético. Una vez lleno, coloca el frasco en un
+              lugar seco, limpio, sin humedad ni cambio bruscos de temperatura.
+              Así, evitas la rehidratación del alimento deshidratado.</p>
+          </div>
+        </details>
+        <details>
+          <summary>¿Cual es el medio de pago?</summary>
+          <div>
+            <p>Aceptamos Tarjetas de Credito, Débito, Transferencias Bancarias y Mercado Pago</p>
+          </div>
+        </details>
+        <details>
+          <summary>¿Por qué comprar en nuestra tienda?</summary>
+          <div>
+            <p>Porque la calidad del producto es importante, pero un equipo que responda rápidamente a cualquier tipo de incidencia también.
+              Estamos orgullosos de poder contar con uno de los mejores servicios de venta.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+  </body> 
+  {%endblock%}
